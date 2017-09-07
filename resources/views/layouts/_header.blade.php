@@ -40,7 +40,7 @@
 								<a href="/contact">CONTACT US</a>
 							</li>
 							<li id="menu-item-6808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6808">
-								<a href="">LOGIN</a>
+								<a href="/user/login">LOGIN</a>
 							</li>
 						</ul>						
 					</nav>				

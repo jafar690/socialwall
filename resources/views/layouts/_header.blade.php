@@ -3,7 +3,7 @@
 		<div class="container">			
 			<div class="row">			  
 				<div class="col span_3">					
-					<a id="logo" href="index.html" >
+					<a id="logo" href="/" >
 						<img class="stnd default-logo dark-version" alt="Miappi. The Visual Marketing Engine." src="img/Logo.png" srcset="img/Logo.png 1x, img/Logo.png 2x" /> 
 					</a>
 				</div><!--/span_3-->
@@ -31,7 +31,7 @@
 						
 						<ul class="sf-menu">	
 							<li id="menu-item-9216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9216">
-								<a href="/about">ABOUT US</a>
+								<a target="_blank" href="https://www.funpicssg.com/about-us">ABOUT US</a>
 							</li>
 							<li id="menu-item-3178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3178">
 								<a href="/plans">PLANS</a>
@@ -39,8 +39,11 @@
 							<li id="menu-item-6808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6808">
 								<a href="/contact">CONTACT US</a>
 							</li>
-							<li id="menu-item-6808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6808">
+							<li id="menu-item-6808" class="menu-item menu-item-type-custom menu-item-object-custom button_solid_color menu-item-8990">
 								<a href="/user/login">LOGIN</a>
+							</li>
+							<li id="menu-item-6808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6808">
+								<a href="/user/login">LIVE PROJECTION</a>
 							</li>
 						</ul>						
 					</nav>				

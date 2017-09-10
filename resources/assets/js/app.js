@@ -17,6 +17,12 @@ window.Vue = require('vue');
 
 Vue.component('example', require('./components/Example.vue'));
 
+import Header from './components/layouts/Header.vue'
+import Aside from './components/layouts/Aside.vue'
+
+Vue.component('header-component', Header)
+Vue.component('aside-component', Aside)
+
 const app = new Vue({
-    el: '#app'
+    el: '#wrapper'
 });

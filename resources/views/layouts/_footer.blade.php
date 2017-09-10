@@ -73,20 +73,15 @@
 		<div class="row" id="copyright">
 			<div class="container">				
 					<div class="col span_5">
-						<p>Copyright Miappi Ltd 2017 </p>							
+						<p>&copy 2015 FUNPICS SINGAPORE. All Rights Reserved. Registration No. 53284017L </p>							
 					</div><!--/span_5-->
 								
 				<div class="col span_7 col_last">
 					<ul id="social">
+					 
 						 <li>
-						 	<a target="_blank" href=""><i class="fa fa-twitter"></i> </a>
-						 </li> 						 
-						 <li>
-						 	<a target="_blank" href=""><i class="fa fa-facebook"></i> </a>
-						 </li> 						 
-						 <li>
-						 	<a target="_blank" href="https://vimeo.com/miappi"> <i class="fa fa-vimeo"></i> </a>
-						 </li> 						
+						 	<a target="_blank" href="www.facebook.com/funpicssg"><i class="fa fa-facebook"></i> </a>
+						 </li> 						 					
 					</ul>
 				</div><!--/span_7-->						
 			</div><!--/container-->			

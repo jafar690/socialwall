@@ -2,6 +2,14 @@
 
 @section('css')
 	<link type="text/css" href="{{ url('css/bootstrap-scope.css') }}" rel="stylesheet" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+
 @endsection
 
 @section('content')
@@ -33,8 +41,11 @@
 					  <div class="col-sm-4">
 						  <div class="form-group">
 						    <label for="eventtype">Event type</label>
-								<input class="form-control" type="text"  id="enventdate">
-						  </div>
+<select class="selectpicker">
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+</select>						  </div>
 					  </div>
 					  <div class="col-sm-4">
 					  	  <div class="form-group">

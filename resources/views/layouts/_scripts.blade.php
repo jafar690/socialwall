@@ -1,5 +1,6 @@
 
 
+<script type='text/javascript' src='/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
 
 <script type='text/javascript'>
 /* <![CDATA[ */

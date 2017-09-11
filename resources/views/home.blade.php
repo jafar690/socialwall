@@ -2,28 +2,34 @@
 
 @section('content')
 
-		<div class="container main-content">
-		
-		<div class="row">
-			
-			
-		<div id="fws_59adc025c17a5"  data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row full-width-section standard_section   "  style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"><div class="inner-wrap"> <div class="row-bg using-image   "  style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/banner.png); background-position: center center; background-repeat: no-repeat; " data-color_overlay="rgba(153,153,153,0.01)" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="1" data-enable_gradient="false"></div></div> </div><div class="col span_12 light left">
-	<div  class="vc_col-sm-6 wpb_column column_container vc_column_container col no-extra-padding"  data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
-		<div class="vc_column-inner">
-			<div class="wpb_wrapper">
-				<div class="divider-wrap"><div style="height: 120px;" class="divider"></div></div><h1 style="font-size: 60px;color: #ffffff;line-height: 1;text-align: left;font-family: 'Old Standard TT';font-weight:700;font-style:normal" class="vc_custom_heading">TELL EVERYONE YOUR STORIES.</h1><div class="divider-wrap"><div style="height: 20px;" class="divider"></div></div><h5 style="font-size: 24px;color: #ffffff;line-height: 1;text-align: left;font-family:Roboto;font-weight:400;font-style:normal" class="vc_custom_heading">Snap, Post and Display on our <br/>First ever Social Wall.</h5><div class="divider-wrap"><div style="height: 175px;" class="divider"></div></div>
+		<div class="container main-content">	
+		<div class="row">		
+			<div id="fws_59adc025c17a5"  data-midnight="light" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row full-width-section standard_section   "  style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"><div class="inner-wrap"> <div class="row-bg using-image   "  style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/banner.png); background-position: center center; background-repeat: no-repeat; " data-color_overlay="rgba(153,153,153,0.01)" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="1" data-enable_gradient="false"></div></div> </div><div class="col span_12 light left">
+			<div  class="vc_col-sm-6 wpb_column column_container vc_column_container col no-extra-padding"  data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+				<div class="vc_column-inner">
+					<div class="wpb_wrapper">
+							<div class="divider-wrap">
+								<div style="height: 120px;" class="divider"></div>
+							</div>
+								<h1 style="font-size: 60px;color: #ffffff;line-height: 1;text-align: left;font-family: 'Old Standard TT';font-weight:700;font-style:normal" class="vc_custom_heading">TELL EVERYONE YOUR STORIES.</h1>
+							<div class="divider-wrap">
+								<div style="height: 20px;" class="divider"></div>
+							</div><h5 style="font-size: 24px;color: #ffffff;line-height: 1;text-align: left;font-family:Roboto;font-weight:400;font-style:normal" class="vc_custom_heading">Snap, Post and Display on our <br/>First ever Social Wall.</h5><div class="divider-wrap"><div style="height: 175px;" class="divider"></div></div>
+					</div> 
+				</div>
 			</div> 
-		</div>
-	</div> 
 
-	<div  class="vc_col-sm-6 wpb_column column_container vc_column_container col no-extra-padding"  data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
-		<div class="vc_column-inner">
-			<div class="wpb_wrapper">
-				<div class="divider-wrap"><div style="height: 800px;" class="divider"></div></div>
-			</div> 
-		</div>
-	</div> 
-</div></div>
+		<div  class="vc_col-sm-6 wpb_column column_container vc_column_container col no-extra-padding"  data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+			<div class="vc_column-inner">
+				<div class="wpb_wrapper">
+					<div class="divider-wrap"><div style="height: 800px;" class="divider"></div></div>
+				</div> 
+			</div>
+		</div> 
+	</div>
+	</div>
+
+
 		<div id="fws_59adc025c24ab"  data-midnight="dark" data-bg-mobile-hidden="" class="wpb_row vc_row-fluid vc_row full-width-section standard_section   "  style="padding-top: 40px; padding-bottom: 40px; "><div class="row-bg-wrap"><div class="inner-wrap"> <div class="row-bg    "  style="" data-color_overlay="" data-color_overlay_2="" data-gradient_direction="" data-overlay_strength="0.3" data-enable_gradient="false"></div></div> </div><div class="col span_12 dark left">
 	<div  class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding"  data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
 		<div class="vc_column-inner">

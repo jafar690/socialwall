@@ -33,7 +33,8 @@
 					  <div class="col-sm-4">
 						  <div class="form-group">
 						    <label for="eventtype">Event type</label>
-							<input class="form-control" type="date"  id="enventdate">
+								<input class="form-control" type="text"  id="enventdate">
+						  </div>
 					  </div>
 					  <div class="col-sm-4">
 					  	  <div class="form-group">

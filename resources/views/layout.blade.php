@@ -4,6 +4,8 @@
 
   @include('layouts._head')
 
+  @yield('css')
+
 </head>
 
 

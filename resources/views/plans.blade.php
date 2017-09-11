@@ -1,5 +1,13 @@
 @extends('layout')
 
+@section('css')
+	<style type="text/css">
+		p {
+		    padding-bottom: 0px;
+		}
+	</style>
+@endsection
+
 @section('content')
 
 <div class="container main-content">	
@@ -11,7 +19,7 @@
 									<div class="divider-wrap"><div style="height: 25px;" class="divider"></div></div>
 									<div class="wpb_text_column wpb_content_element " >
 										<div class="wpb_wrapper">
-											<h3>Pricing plans to suit your needs</h3>
+											<h1>Pricing plans to suit your needs</h1>
 											<h4>starting at just $88/day</h4>
 										</div>
 									</div>
@@ -41,7 +49,7 @@
 				<div style=" color: #cccccc;" class="vc_col-sm-4 price-block wpb_column column_container vc_column_container col centered-text padding-3-percent" data-cfc="true" data-using-bg="true" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="true" data-bg-color="#1a1a1a" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
 					<div class="vc_column-inner">
 						<div class="wpb_wrapper">
-							<h2 style="font-size: 40px;color: #ffffff;text-align: center;font-family:Montserrat;font-weight:700;font-style:normal" class="vc_custom_heading vc_custom_1502268576809">WEDDING</h2>
+							<h2 style="font-size: 40px;color: #ffffff;text-align: center;font-family:Arial;font-weight:700;font-style:normal" class="vc_custom_heading vc_custom_1502268576809">WEDDING</h2>
 							<div class="wpb_text_column wpb_content_element " >
 								<div class="wpb_wrapper">
 									<p>Suitable for Weddings.</p>
@@ -84,8 +92,8 @@
 								<div style="margin-top: 12px; height: 1px; margin-bottom: 12px;" data-width="100%" data-animate="" data-animation-delay="" data-color="default" class="divider-border">
 								</div>
 							</div>
-							<a class="nectar-button large regular accent-color  regular-button price-button" style="margin-top:125px;" href="#" data-color-override="#d3287b" data-hover-color-override="false" data-hover-text-color-override="#fff">
-								<span>REQUEST A DEMO</span>
+							<a class="nectar-button large regular accent-color  regular-button price-button" style="margin-top:143px;" href="/contact" data-color-override="#d3287b" data-hover-color-override="false" data-hover-text-color-override="#fff">
+								<span>BOOK NOW</span>
 							</a>
 							<div class="divider-wrap">
 								<div style="height: 20px;" class="divider"></div>
@@ -97,7 +105,7 @@
 				<div style=" color: #cccccc;" class="vc_col-sm-4 price-block wpb_column column_container vc_column_container col centered-text padding-3-percent" data-cfc="true" data-using-bg="true" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="true" data-bg-color="#1a1a1a" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
 					<div class="vc_column-inner">
 						<div class="wpb_wrapper">
-							<h2 style="font-size: 40px;color: #ffffff;text-align: center;font-family:Montserrat;font-weight:700;font-style:normal" class="vc_custom_heading vc_custom_1502268550632">PLUS</h2>
+							<h2 style="font-size: 40px;color: #ffffff;text-align: center;font-family:Arial;font-weight:700;font-style:normal" class="vc_custom_heading vc_custom_1502268550632">PLUS</h2>
 							<div class="wpb_text_column wpb_content_element " >
 								<div class="wpb_wrapper">
 									<p>Suitable for Corporate</p>
@@ -139,7 +147,7 @@
 							</div>
 							<div class="divider-wrap"><div style="margin-top: 12px; height: 1px; margin-bottom: 12px;" data-width="100%" data-animate="" data-animation-delay="" data-color="default" class="divider-border"></div>
 							</div>
-							<a class="nectar-button large regular accent-color  regular-button price-button" style="margin-top: 125px; "  href="#" data-color-override="#d3287b" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>REQUEST A DEMO</span></a>
+							<a class="nectar-button large regular accent-color  regular-button price-button" style="margin-top: 143px; "  href="/contact" data-color-override="#d3287b" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>BOOK NOW</span></a>
 							<div class="divider-wrap">
 								<div style="height: 20px;" class="divider"></div>
 							</div>
@@ -150,7 +158,7 @@
 				<div style=" color: #cccccc;" class="vc_col-sm-4 price-block wpb_column column_container vc_column_container col centered-text padding-3-percent" data-cfc="true" data-using-bg="true" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="true" data-bg-color="#1a1a1a" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
 					<div class="vc_column-inner">
 						<div class="wpb_wrapper">
-							<h2 style="font-size: 40px;color: #ffffff;text-align: center;font-family:Montserrat;font-weight:700;font-style:normal" class="vc_custom_heading vc_custom_1502268550632">PREMIUM</h2>
+							<h2 style="font-size: 40px;color: #ffffff;text-align: center;font-family:Arial;font-weight:700;font-style:normal" class="vc_custom_heading vc_custom_1502268550632">PREMIUM</h2>
 							<div class="wpb_text_column wpb_content_element " >
 								<div class="wpb_wrapper">
 									<p>Suitable for Corporate</p>
@@ -196,13 +204,13 @@
 							</div>
 							<div class="wpb_text_column wpb_content_element " >
 								<div class="wpb_wrapper">
-									<p>*Has to be utilise within activation period of 1 month</p>
+									<p>*Has to be utilised within activation period of 1 month</p>
 
 								</div>
 							</div>
 							<div class="divider-wrap"><div style="margin-top: 12px; height: 1px; margin-bottom: 12px;" data-width="100%" data-animate="" data-animation-delay="" data-color="default" class="divider-border"></div>
 							</div>
-							<a class="nectar-button large regular accent-color  regular-button price-button" style="margin-top: 30px; "  href="#" data-color-override="#d3287b" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>REQUEST A DEMO</span></a>
+							<a class="nectar-button large regular accent-color  regular-button price-button" style="margin-top: 30px; "  href="/contact" data-color-override="#d3287b" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>BOOK NOW</span></a>
 							<div class="divider-wrap">
 								<div style="height: 20px;" class="divider"></div>
 							</div>
@@ -213,7 +221,7 @@
 				<div style=" color: #cccccc;" class="vc_col-sm-4 price-block wpb_column column_container vc_column_container col centered-text padding-3-percent" data-cfc="true" data-using-bg="true" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="true" data-bg-color="#1a1a1a" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
 					<div class="vc_column-inner">
 						<div class="wpb_wrapper">
-							<h2 style="font-size: 40px;color: #ffffff;text-align: center;font-family:Montserrat;font-weight:700;font-style:normal" class="vc_custom_heading vc_custom_1502268550632">CUSTOM</h2>
+							<h2 style="font-size: 40px;color: #ffffff;text-align: center;font-family:Arial;font-weight:700;font-style:normal" class="vc_custom_heading vc_custom_1502268550632">CUSTOM</h2>
 							<div class="wpb_text_column wpb_content_element " >
 								<div class="wpb_wrapper">
 									<p>Suitable for Corporate</p>
@@ -259,13 +267,13 @@
 							</div>
 							<div class="wpb_text_column wpb_content_element " >
 								<div class="wpb_wrapper">
-									<p>*Has to be utilise within activation period of 1 year</p>
+									<p>*Has to be utilised within activation period of 1 year</p>
 
 								</div>
 							</div>
 							<div class="divider-wrap"><div style="margin-top: 12px; height: 1px; margin-bottom: 12px;" data-width="100%" data-animate="" data-animation-delay="" data-color="default" class="divider-border"></div>
 							</div>
-							<a class="nectar-button large regular accent-color  regular-button price-button" style="margin-top: 30px; "  href="#" data-color-override="#d3287b" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>REQUEST A DEMO</span></a>
+							<a class="nectar-button large regular accent-color  regular-button price-button" style="margin-top: 55px; "  href="/contact" data-color-override="#d3287b" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>BOOK NOW</span></a>
 							<div class="divider-wrap">
 								<div style="height: 20px;" class="divider"></div>
 							</div>
@@ -293,6 +301,7 @@
 		<div  class="vc_col-sm-12 wpb_column column_container vc_column_container col padding-2-percent"  data-shadow="none" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="left-right" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
 			<div class="vc_column-inner">
 				<div class="wpb_wrapper">
+				<h2 style="font-size: 30px;color: #191919;text-align: center;font-family:Arial;font-weight:700;font-style:normal" class="vc_custom_heading">Our Clients</h2>
 					<div class="img-with-aniamtion-wrap " data-max-width="100%"><div class="inner"><img data-shadow="none" data-shadow-direction="middle" class="img-with-animation " data-delay="0" height="800" width="1920" data-animation="fade-in" src="/images/homeimage5.png" srcset="/images/homeimage5.png 1920w, /images/homeimage5.png 300w, /images/homeimage5.png 768w, /images/homeimage5.png 1024w" sizes="100vw" alt="" /></div></div>
 				</div> 
 			</div>

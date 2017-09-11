@@ -8,3 +8,5 @@ var nectarLove = {"ajaxurl":"https:\/\/miappi.com\/wp-admin\/admin-ajax.php","po
 </script>
 
 <script type="text/javascript" defer src="/wp-content/cache/autoptimize/js/autoptimize_57cc97d3bd77fd2c31bde8ea045edf2e.js"></script>
+
+@yield('scripts')

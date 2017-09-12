@@ -2,13 +2,6 @@
 
 @section('css')
 	<link type="text/css" href="{{ url('css/bootstrap-scope.css') }}" rel="stylesheet" >
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-
-<!-- (Optional) Latest compiled and minified JavaScript translation files -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
 
 @endsection
 
@@ -41,11 +34,12 @@
 					  <div class="col-sm-4">
 						  <div class="form-group">
 						    <label for="eventtype">Event type</label>
-<select class="selectpicker">
-  <option>Mustard</option>
-  <option>Ketchup</option>
-  <option>Relish</option>
-</select>						  </div>
+						    <select class="form-control" id="eventtype">
+						      <option>Wedding</option>
+						      <option>Corporate </option>
+						      <option>Graduation </option>
+						    </select>						  
+						  </div>
 					  </div>
 					  <div class="col-sm-4">
 					  	  <div class="form-group">
@@ -55,8 +49,13 @@
 					  </div>
 					  <div class="col-sm-4">
 					  	  <div class="form-group">
-						    <label for="exampleInputPassword1">Duration</label>
-						    <input type="number" class="form-control" id="phone" placeholder="Enter phone">
+						    <label for="duration">Duration</label>
+						    <select class="form-control" id="duration">
+						      <option>1 day</option>
+						      <option>1 week</option>
+						      <option>1 month </option>
+						      <option>1 year </option>
+						    </select>	
 						  </div>
 					  </div>
 					  <div class="col-sm-6">
@@ -68,7 +67,12 @@
 					  <div class="col-sm-6">
 					  	  <div class="form-group">
 						    <label for="exampleInputPassword1">How did you learn about us?</label>
-						    <input type="number" class="form-control" id="phone" placeholder="Enter phone">
+						    <select class="form-control" id="duration">
+						      <option>Facebook</option>
+						      <option>Google Ads</option>
+						      <option>Friends Wedding </option>
+						      <option>Other events</option>
+						    </select>						  
 						  </div>
 					  </div>
 					  <div class="col-sm-12">
@@ -87,7 +91,7 @@
 				<div class="wpb_wrapper">	
 					<div class="wpb_text_column wpb_content_element " >
 						<div class="wpb_wrapper">
-							<h2><span style="color: #333333;">Contact us</span></h2>
+							<h2><span style="color: #333333;font-family: Arial;">Contact us</span></h2>
 
 						</div>
 					</div>

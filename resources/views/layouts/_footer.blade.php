@@ -5,7 +5,7 @@
 		<div id="call-to-action">
 			<div class="container">
 				<div class="triangle"></div>
-				<span> GET STARTED NOW </span>
+				<span style="font-family: Arial;"> GET STARTED NOW </span>
 				<a class="nectar-button regular-button  accent-color" data-color-override="false" href="/contact">Book Now </a>
 			</div>
 		</div>

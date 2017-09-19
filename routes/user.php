@@ -10,3 +10,7 @@ Route::get('/home', function () {
     return view('user.home');
 })->name('home');
 
+Route::get('/facebook', 'SocialController@facebook');
+Route::get('/twitter', 'SocialController@twitter');
+Route::get('/instagram', 'SocialController@instagram');
+

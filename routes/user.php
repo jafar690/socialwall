@@ -14,3 +14,5 @@ Route::get('/facebook', 'SocialController@facebook');
 Route::get('/twitter', 'SocialController@twitter');
 Route::get('/instagram', 'SocialController@instagram');
 
+Route::resource('/wall', 'WallsController');
+

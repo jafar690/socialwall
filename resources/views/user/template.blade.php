@@ -25,34 +25,34 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active">
-                        <a href="dashboard.html">
+                    <li class="{{ Request::is('user/home') ? "active" : "" }}">
+                        <a href="{{ url('user/home') }}">
                             <i class="material-icons">dashboard</i>
                             <p>Walls</p>
                         </a>
                     </li>
-                    <li>
-                        <a data-toggle="collapse" href="#pagesExamples">
-                            <i class="material-icons">image</i>
+                    <li class="{{ Request::is('user/facebook'||'user/instagram'||'user/twitter') ? "active" : "" }}">
+                        <a data-toggle="collapse" href="#pagesExamples" aria-expanded="true">
+                            <i class="fa fa-comments-o"></i>
                             <p>Social Networks
                                 <b class="caret"></b>
                             </p>
                         </a>
-                        <div class="collapse" id="pagesExamples">
+                        <div class="collapse in" id="pagesExamples">
                             <ul class="nav">
-                                <li>
+                                <li class="{{ Request::is('user/facebook') ? "active" : "" }}">
                                     <a href="{{ url('user/facebook') }}">
                                         <span class="sidebar-mini">FB</span>
                                         <span class="sidebar-normal">Facebook</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="{{ Request::is('user/instagram') ? "active" : "" }}">
                                     <a href="{{ url('user/instagram') }}">
                                         <span class="sidebar-mini">IG</span>
                                         <span class="sidebar-normal">Instagram</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="{{ Request::is('user/twitter') ? "active" : "" }}">
                                     <a href="{{ url('user/twitter') }}">
                                         <span class="sidebar-mini">TW</span>
                                         <span class="sidebar-normal">Twitter</span>

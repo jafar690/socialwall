@@ -83,7 +83,7 @@
                                 </table>
 
                                 <br>
-                                <a type="button" href="{{ url('user/walls/create') }}" class="btn btn-info btn-round">Create Wall <i class="material-icons">keyboard_arrow_right</i></a>
+                                <a type="button" href="{{ url('user/wall/create') }}" class="btn btn-info btn-round">Create Wall <i class="material-icons">keyboard_arrow_right</i></a>
                             </div>
                         </div>
                     </div>

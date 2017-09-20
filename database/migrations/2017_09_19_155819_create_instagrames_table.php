@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInstagramsTable extends Migration
+class CreateInstagramesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreateInstagramsTable extends Migration
      */
     public function up()
     {
-        Schema::create('instagrams', function (Blueprint $table) {
+        Schema::create('instagrames', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->string('instagram_id');
+            $table->string('instagram_username');
+            $table->string('access_token');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateInstagramsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('instagrams');
+        Schema::dropIfExists('instagrames');
     }
 }

@@ -38,4 +38,12 @@ class User extends Authenticatable
     {
         $this->notify(new UserResetPassword($token));
     }
+
+    /**
+     * Get the instagram record associated with the user.
+     */
+    public function instagrame()
+    {
+        return $this->hasOne('App\instagrame');
+    }
 }

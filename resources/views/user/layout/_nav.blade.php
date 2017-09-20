@@ -46,10 +46,15 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">person</i>
-                                    <p class="hidden-lg hidden-md">Profile</p>
+                                <a href="{{ url('/user/logout') }}"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    <i class="fa fa-sign-out"></i>
+                                    <p class="hidden-lg hidden-md">Logout</p>
                                 </a>
+                                    <form id="logout-form" action="{{ url('/user/logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
                             </li>
                             <li class="separator hidden-lg hidden-md"></li>
                         </ul>

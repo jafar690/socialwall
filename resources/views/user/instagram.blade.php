@@ -22,7 +22,39 @@
                                     </div>
                                 </div>
                             @else
-
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">#</th>
+                                                <th>UserName</th>
+                                                <th>Instagram ID</th>
+                                                <th class="text-center">Status</th>
+                                                <th class="text-center">Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">1</td>
+                                                <td>{{$instagram->instagram_username}}</td>
+                                                <td>{{$instagram->instagram_id}}</td>
+                                                <td class="text-center">
+                                                    <button class="btn btn-success btn-xs">
+                                                        <span class="btn-label">
+                                                            <i class="material-icons">check</i>
+                                                        </span>
+                                                        Connected
+                                                    </button>
+                                                </td>
+                                                <td class="td-actions text-center">
+                                                    <a type="button" rel="tooltip" class="btn btn-danger btn-round">
+                                                        <i class="material-icons">close</i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             @endif
                         </div>
                     </div>

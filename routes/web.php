@@ -14,6 +14,7 @@
 Route::get('/', 'PagesController@home');
 Route::get('/plans', 'PagesController@plans');
 Route::get('/contact', 'PagesController@contact');
+Route::get('/socialwall', 'PagesController@wall');
 
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/login', ['as' => 'adminlogin', 'uses' => 'AdminAuth\LoginController@showLoginForm']);

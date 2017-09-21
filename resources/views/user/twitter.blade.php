@@ -19,7 +19,7 @@
                             <p>No Twitter Account linked yet.</p>
                             <div class="row">
                                 <div class="col-md-3 col-sm-4">
-                                    <a href="" class="btn btn-social btn-fill btn-twitter">
+                                    <a href="{{ url('user/twitter/auth') }}" class="btn btn-social btn-fill btn-twitter">
                                         <i class="fa fa-twitter"></i> Connect Twitter Account
                                     </a>
                                 </div>

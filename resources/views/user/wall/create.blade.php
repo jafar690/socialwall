@@ -12,7 +12,16 @@
                         </div>
                         <div class="card-content">
                             <h4 class="card-title">Create Wall</h4>
-
+                            <form method="get" action="http://demos.creative-tim.com/" class="form-horizontal">
+                               <div class="form-group label-floating">
+                                    <label class="control-label">Email address</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

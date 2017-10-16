@@ -9,6 +9,7 @@ use Widop\Twitter\OAuth\OAuthConsumer;
 use Widop\Twitter\OAuth\Signature\OAuthHmacSha1Signature;
 use Widop\Twitter\OAuth\OAuth;
 use App\Instagrame;
+use App\Facebook;
 use Auth;
 use Session;
 
@@ -89,8 +90,59 @@ class SocialController extends Controller
         $verifier = $_GET['oauth_verifier'];
         $requestToken = Session::get('requestToken');
         $accessToken = $oauth->getAccessToken($requestToken, $verifier);
-        $token = json_decode($accessToken);
-        dd($token);
+        $key = array_pluck($accessToken, 'OAuthToken. -key');
+        dd($key);
         return redirect(url('user/twitter'));
+    }
+
+    public function redirectToFacebook()
+    {
+        $provider = new \League\OAuth2\Client\Provider\Facebook([
+            'clientId'          => env('FACEBOOK_APP_ID'),
+            'clientSecret'      => env('FACEBOOK_APP_SECRET'),
+            'redirectUri'       => 'http://127.0.0.1:8000/user/facebook/callback',
+            'graphApiVersion'   => 'v2.10',
+        ]);
+
+        // If we don't have an authorization code then get one
+        $authUrl = $provider->getAuthorizationUrl([
+            'scope' => ['email', 'pages_show_list'],
+        ]);
+        $_SESSION['oauth2state'] = $provider->getState();
+        
+        return redirect($authUrl);      
+    }
+
+    public function FacebookCallback()
+    {
+        $provider = new \League\OAuth2\Client\Provider\Facebook([
+            'clientId'          => env('FACEBOOK_APP_ID'),
+            'clientSecret'      => env('FACEBOOK_APP_SECRET'),
+            'redirectUri'       => 'http://127.0.0.1:8000/user/facebook/callback',
+            'graphApiVersion'   => 'v2.10',
+        ]);
+
+        // Try to get an access token (using the authorization code grant)
+        $token = $provider->getAccessToken('authorization_code', [
+            'code' => $_GET['code']
+        ]);
+        // Optional: Now you have a token you can look up a users profile data
+        try {
+
+            // We got an access token, let's now get the user's details
+            $user = $provider->getResourceOwner($token);
+            dd($user);
+            $facebook = new Facebook;
+            $facebook->user_id = Auth::user()->id;
+            $facebook->facebook_id = $user->getId();
+            $facebook->facebook_username = $user->getName();
+            $facebook->access_token = $token;
+            $facebook->save();
+
+        } catch (\Exception $e) {
+
+            // Failed to get user details
+            exit('Oh dear...');
+        }
     }
 }

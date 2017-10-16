@@ -20,7 +20,7 @@
                             <p>No Facebook Account linked yet.</p>
                             <div class="row">
                                 <div class="col-md-3 col-sm-4">
-                                    <a href="" class="btn btn-social btn-fill btn-facebook">
+                                    <a href="{{ url('user/facebook/auth') }}" class="btn btn-social btn-fill btn-facebook">
                                         <i class="fa fa-facebook"></i> Connect Facebook Account
                                     </a>
                                 </div>

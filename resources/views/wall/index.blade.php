@@ -18,32 +18,36 @@ jQuery(document).ready(function($){
 	$('#social-stream').dcSocialStream({
 		feeds: {
 			twitter: {
-				id: 'designchemical'
+				id: 'GakamiBenjamin'
 			},
 			facebook: {
 				id: '157969574262873',
 				out: 'intro,thumb,text,user,share'
 			},
 			instagram: {
-				id: '!2265605560',
-				accessToken: '2265605560.89ae6ad.3ebf47bdc5564d1eb690356c2005f686'
+				id: '#love,!2265605560',
+				search: 'Search',
+				out: 'intro,thumb,text,user',
+				accessToken: '4464708641.3a81a9f.151453bb3f6c4efaab0c12071c14d3ea'
 			}
 		},
-		rotate: {
-			delay: 0
+		rotate: {	 		
+			direction:	'up',	
+			delay:	80	
 		},
 		style: {
 			layout: 'modern',
 			colour: 'light'
 		},
-		twitterId: 'designchemical',
+		twitterId: 'GakamiBenjamin',
 		control: false,
 		filter: true,
 		wall: true,
 		center: true,
 		cache: false,
 		max: 'limit',
-		limit: 3,
+		limit: 10,
+
 		iconPath: 'wall/images/dcsns-dark/',
 		imagePath: 'wall/images/dcsns-dark/'
 	});

@@ -20,5 +20,8 @@ Route::get('/instagram/callback/', 'SocialController@InstagramCallback');
 Route::get('/twitter/auth/', 'SocialController@redirectToTwitter');
 Route::get('/twitter/callback/', 'SocialController@twitterCallback');
 
+Route::get('/facebook/auth/', 'SocialController@redirectToFacebook');
+Route::get('/facebook/callback/', 'SocialController@FacebookCallback');
+
 Route::resource('/wall', 'WallsController');
 

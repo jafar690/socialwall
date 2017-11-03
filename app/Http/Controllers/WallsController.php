@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Facebook;
+use App\FacebookPages;
+use App\Instagrame;
+use App\Twitter;
+use Auth;
 
 class WallsController extends Controller
 {
@@ -23,7 +28,16 @@ class WallsController extends Controller
      */
     public function create()
     {
-        return view('user.wall.create');
+        $facebook = Facebook::where('user_id', Auth::user()->id)->first();
+        $instagram = Instagrame::where('user_id', Auth::user()->id)->first();
+        $twitter = Twitter::where('user_id', Auth::user()->id)->first();
+        $pages = Facebook::find($facebook->id)->facebookpages;
+        
+        return view('user.wall.create', [
+                    'pages' => $pages, 
+                    'instagram' => $instagram, 
+                    'twitter' => $twitter 
+                ]);
     }
 
     /**

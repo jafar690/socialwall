@@ -25,13 +25,19 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="{{ Request::is('user/home') ? "active" : "" }}">
+                    <li class="{{ route_is_active('user.home') }}">
                         <a href="{{ url('user/home') }}">
                             <i class="material-icons">dashboard</i>
-                            <p>Walls</p>
+                            <p>My Walls</p>
                         </a>
                     </li>
-                    <li class="{{ Request::is('user/facebook'||'user/instagram'||'user/twitter') ? "active" : "" }}">
+                    <li class="{{ route_is_active('user.wall.create') }}">
+                        <a href="{{ url('user/wall/create') }}">
+                            <i class="material-icons">dashboard</i>
+                            <p>Create Wall</p>
+                        </a>
+                    </li>
+                    <li class="{{ routes_are_active(['mentions.index']) }}">
                         <a data-toggle="collapse" href="#pagesExamples" aria-expanded="true">
                             <i class="fa fa-comments-o"></i>
                             <p>Social Networks

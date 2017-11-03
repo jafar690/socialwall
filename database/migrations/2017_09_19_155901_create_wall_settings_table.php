@@ -15,11 +15,6 @@ class CreateWallSettingsTable extends Migration
     {
         Schema::create('wall_settings', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->boolean('facebook')->default(true);
-            $table->boolean('instagram')->default(true);
-            $table->boolean('twitter')->default(true);
-            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

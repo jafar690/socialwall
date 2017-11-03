@@ -15,6 +15,11 @@ class CreateTwittersTable extends Migration
     {
         Schema::create('twitters', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->string('twitter_id');
+            $table->string('twitter_username');
+            $table->string('access_token');
+            $table->string('access_token_secret');
             $table->timestamps();
         });
     }

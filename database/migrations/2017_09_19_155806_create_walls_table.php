@@ -15,6 +15,13 @@ class CreateWallsTable extends Migration
     {
         Schema::create('walls', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->string('name');
+            $table->string('title');
+            $table->boolean('facebook')->default(true);
+            $table->boolean('instagram')->default(true);
+            $table->boolean('twitter')->default(true);
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

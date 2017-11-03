@@ -4,6 +4,7 @@
 <script src="{{ url("users/assets/js/bootstrap.min.js") }}" type="text/javascript"></script>
 <script src="{{ url("users/assets/js/material.min.js") }}" type="text/javascript"></script>
 <script src="{{ url("users/assets/js/perfect-scrollbar.jquery.min.js") }}" type="text/javascript"></script>
+@yield('scripts')
 <!-- Library for adding dinamically elements -->
 <script src="{{ url("users/assets/js/arrive.min.js") }}" type="text/javascript"></script>
 <!-- Forms Validations Plugin -->
@@ -26,11 +27,10 @@
 {{-- <script src="{{ url("users/assets/js/jquery-jvectormap.js") }}"></script> --}}
 <!-- Sliders Plugin, full documentation here: https://refreshless.com/nouislider/ -->
 <script src="{{ url("users/assets/js/nouislider.min.js") }}"></script>
-<!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFPQibxeDaLIUHsC6_KqDdFaUdhrbhZ3M"></script>
+
 <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-{{-- <script src="{{ url("users/assets/js/jquery.select-bootstrap.js") }}"></script>
- --}}<!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
+<script src="{{ url("users/assets/js/jquery.select-bootstrap.js") }}"></script>
+<!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
 {{-- <script src="{{ url("users/assets/js/jquery.datatables.js") }}"></script>--}}
 <!-- Sweet Alert 2 plugin, full documentation here: https://limonte.github.io/sweetalert2/ -->
 {{-- <script src="{{ url("users/assets/js/sweetalert2.js") }}"></script> --}}
@@ -44,12 +44,3 @@
 <script src="{{ url("users/assets/js/material-dashboard5438.js?v=1.2.0") }}"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{ url("users/assets/js/demo.js") }}"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-
-        demo.initVectorMap();
-    });
-</script>

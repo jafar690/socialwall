@@ -10,19 +10,24 @@ use Widop\Twitter\OAuth\Signature\OAuthHmacSha1Signature;
 use Widop\Twitter\OAuth\OAuth;
 use App\Instagrame;
 use App\Facebook;
+use App\FacebookPages;
+use App\Twitter;
 use Auth;
+use TwitterApi;
 use Session;
 
 class SocialController extends Controller
 {
     public function facebook()
     {
-    	return view('user.facebook');
+        $facebook = Facebook::where('user_id', Auth::user()->id)->first();
+    	return view('user.facebook')->withFacebook($facebook);
     }
 
     public function twitter()
     {
-    	return view('user.twitter');    	
+        $twitter = Twitter::where('user_id', Auth::user()->id)->first();
+    	return view('user.twitter')->withTwitter($twitter);    	
     }
 
     public function instagram()
@@ -90,8 +95,26 @@ class SocialController extends Controller
         $verifier = $_GET['oauth_verifier'];
         $requestToken = Session::get('requestToken');
         $accessToken = $oauth->getAccessToken($requestToken, $verifier);
-        $key = array_pluck($accessToken, 'OAuthToken. -key');
-        dd($key);
+        $key = $accessToken->getKey();
+        $secret = $accessToken->getSecret();
+
+        TwitterApi::reconfig([
+            "consumer_key" => env('CONSUMER_KEY'),
+            "consumer_secret"  => env('CONSUMER_SECRET'),
+            "token" => $key,
+            "secret" => $secret,
+        ]);
+
+        $user = TwitterApi::getCredentials();
+
+        $twitter = new Twitter;
+        $twitter->user_id = Auth::user()->id;
+        $twitter->twitter_id = $user->id_str;
+        $twitter->twitter_username = $user->screen_name;
+        $twitter->access_token = $key;
+        $twitter->access_token_secret = $secret;
+        $twitter->save();
+
         return redirect(url('user/twitter'));
     }
 
@@ -126,23 +149,52 @@ class SocialController extends Controller
         $token = $provider->getAccessToken('authorization_code', [
             'code' => $_GET['code']
         ]);
-        // Optional: Now you have a token you can look up a users profile data
+        
+        try {
+            $access_token = $provider->getLongLivedAccessToken($token);
+        } catch (Exception $e) {
+            echo 'Failed to exchange the token: '.$e->getMessage();
+            exit();
+        }
+
+        $access_token->getToken();
+
         try {
 
             // We got an access token, let's now get the user's details
             $user = $provider->getResourceOwner($token);
-            dd($user);
-            $facebook = new Facebook;
-            $facebook->user_id = Auth::user()->id;
-            $facebook->facebook_id = $user->getId();
-            $facebook->facebook_username = $user->getName();
-            $facebook->access_token = $token;
-            $facebook->save();
 
         } catch (\Exception $e) {
 
             // Failed to get user details
             exit('Oh dear...');
         }
+
+        $facebook = new Facebook;
+        $facebook->user_id = Auth::user()->id;
+        $facebook->facebook_id = $user->getId();
+        $facebook->facebook_username = $user->getName();
+        $facebook->access_token = $access_token;
+        $facebook->longlived = true;
+        $facebook->save();
+
+        $baseUrl = 'https://graph.facebook.com/v2.10';
+        $response = file_get_contents($baseUrl.'/me/accounts?'.'access_token='.$access_token);
+        $data = json_decode($response, true);
+        array_forget($data, 'paging');
+
+        foreach($data['data'] as $page) {
+            $fbpage = new FacebookPages;
+            $fbpage->facebook_id = $facebook->id;
+            $fbpage->page_id = $page['id'];
+            \Log::info('loop2');
+            $fbpage->page_name = $page['name'];
+            $fbpage->access_token = $page['access_token'];
+            $fbpage->save();
+        }
+
+
+        return redirect(url('user/facebook'));
+
     }
 }

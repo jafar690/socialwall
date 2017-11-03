@@ -37,7 +37,7 @@
                             <p>Create Wall</p>
                         </a>
                     </li>
-                    <li class="{{ routes_are_active(['mentions.index']) }}">
+                    <li class="{{ routes_are_active(['user.facebook','user.instagram','user.twitter']) }}">
                         <a data-toggle="collapse" href="#pagesExamples" aria-expanded="true">
                             <i class="fa fa-comments-o"></i>
                             <p>Social Networks
@@ -46,19 +46,19 @@
                         </a>
                         <div class="collapse in" id="pagesExamples">
                             <ul class="nav">
-                                <li class="{{ Request::is('user/facebook') ? "active" : "" }}">
+                                <li class="{{ route_is_active('user.facebook') }}">
                                     <a href="{{ url('user/facebook') }}">
                                         <span class="sidebar-mini">FB</span>
                                         <span class="sidebar-normal">Facebook</span>
                                     </a>
                                 </li>
-                                <li class="{{ Request::is('user/instagram') ? "active" : "" }}">
+                                <li class="{{ route_is_active('user.instagram') }}">
                                     <a href="{{ url('user/instagram') }}">
                                         <span class="sidebar-mini">IG</span>
                                         <span class="sidebar-normal">Instagram</span>
                                     </a>
                                 </li>
-                                <li class="{{ Request::is('user/twitter') ? "active" : "" }}">
+                                <li class="{{ route_is_active('user.twitter') }}">
                                     <a href="{{ url('user/twitter') }}">
                                         <span class="sidebar-mini">TW</span>
                                         <span class="sidebar-normal">Twitter</span>

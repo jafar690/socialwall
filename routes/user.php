@@ -10,9 +10,9 @@ Route::get('/home', function () {
     return view('user.home');
 })->name('home');
 
-Route::get('/facebook', 'SocialController@facebook');
-Route::get('/twitter', 'SocialController@twitter');
-Route::get('/instagram', 'SocialController@instagram');
+Route::get('/facebook', 'SocialController@facebook')->name('facebook');
+Route::get('/twitter', 'SocialController@twitter')->name('twitter');
+Route::get('/instagram', 'SocialController@instagram')->name('instagram');
 
 Route::get('/instagram/auth/', 'SocialController@redirectToIsnstagram');
 Route::get('/instagram/callback/', 'SocialController@InstagramCallback');
